@@ -50,10 +50,13 @@ public class Main {
         numbers2.add(4);
         numbers2.add(5);
         System.out.println(numbers2);
-        numbers2.forEach(x -> {
-            System.out.print(x * x + " ");
-        });
-        System.out.println();
+//        numbers2.forEach(x -> {
+//            System.out.print(x * x + " ");
+//        });
+        for (int i = 0; i < numbers2.size() ; i++) {
+            numbers2.set(i, (int) Math.pow(numbers2.get(i), 2));
+        }
+        System.out.println(numbers2);
 
         // Задача 4
         //Дан список чисел, необходимо удалить все вхождения числа 20 из него.
